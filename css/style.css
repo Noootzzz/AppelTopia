@@ -1,0 +1,471 @@
+@font-face {
+    font-family: "Futura PT";
+    src:url("../img/FuturaPT-Bold/FuturaPT-Bold.woff2") format("woff2"),
+        url("../img/FuturaPT-Bold/FuturaPT-Bold.woff") format("woff"),
+        url("../img/FuturaPT-Bold/FuturaPT-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Futura PT Medium";
+    src:url("../img/FuturaPT-Medium/FuturaPT-Medium.woff2") format("woff2"),
+        url("../img/FuturaPT-Medium/FuturaPT-Medium.woff") format("woff"),
+        url("../img/FuturaPT-Medium/FuturaPT-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+:root {
+    --white: #fffef4;
+    --black: #111;
+    --orange: #bf8448;      
+    --green: #e6ffc9;
+
+    --font-family-text: "Futura PT Medium", sans-serif;
+    --font-family-title: "Futura PT", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-text);
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--black);
+    background-image: url(../img/background.png);
+    background-size: contain;
+    margin: 3vh 15vh 0vh 15vh;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-family-title);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3vh 3vh 7vh 0vh;
+    font-size: 2.5vh;
+}
+
+header img {
+    width: 15%;
+    margin-top: 3vh;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav .links {
+    margin-right: 2vh;
+}
+
+header nav .links a {
+    text-decoration: none;
+    color: var(--black);
+    margin: 0vh 3vh 0vh 3vh;
+    padding: 3vh 3vh;
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+header nav .links a:hover {
+    background-color: var(--orange);
+    transition: .5s;
+}
+
+main #first-section {
+    min-height: 100vh;
+    display: flex;
+}
+
+main #first-section h1 {
+    font-size: 13vh;
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+main #first-section h3 {
+    font-size: 6vh;
+    margin: 2vh 0vh 8vh 0vh;
+}
+
+main #first-section h3, p {
+    text-transform: uppercase;
+}
+
+main #first-section p {
+    margin: 8.5vh 0vh 8.5vh 0vh;
+    font-size: 2vh;
+}
+
+.don-btn {
+    text-decoration: none;
+    color: var(--black);
+    padding: 3vh 5vh;
+    border-radius: 10px;
+    font-size: 3vh;
+    border: none;
+    background-color: var(--green);
+    cursor: pointer;
+    font-family: var(--font-family-title);
+    margin-right: 20px;
+    transition: .5s;
+}
+
+.don-btn:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    transition: .5s;
+}
+
+main #first-section #second-button {
+    margin-left: 5vh;
+}
+
+main #first-section #right {
+    display: flex;
+    padding-left: 11vw;
+}
+
+main #first-section img:nth-child(1){
+    width: 50vh;
+    height: 65vh;
+    clip-path: polygon(0 0, 0% 99%, 99% 0);
+    border-radius: 10px;
+    transition: .3s;
+}
+main #first-section img:nth-child(1):hover {
+    clip-path: initial;
+    z-index: 10;
+    cursor: pointer;
+    transition: .3s;
+}
+main #first-section img:nth-child(2){
+    position: absolute;
+    width: 50vh;
+    height: 65vh;
+    clip-path: polygon(100% 100%, 1% 100%, 100% 1%);   
+    border-radius: 10px;
+}
+main #first-section img:nth-child(2):hover {
+    clip-path: initial;
+    position: -webkit-sticky;
+    z-index: 15;
+    cursor: pointer;
+    transition: .3s;
+}
+
+main #second-section, main #fourth-section {
+    min-height: 70vh;
+    text-transform: uppercase;
+    padding-top: 7vh;
+}
+main #second-section .informations, main #fourth-section .gameplay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main #second-section .informations iframe, main #fourth-section .gameplay iframe {
+    min-height: 40vh;
+    margin: 10vh;
+    width: 34vw ;
+    min-height: 40vh;
+}
+main #fourth-section .gameplay iframe{
+    margin-left: 0px;
+}
+
+main #fourth-section .gameplay .first-informations {
+    margin-right: 6vw;
+}
+
+main #second-section .informations section h2, main #fourth-section .gameplay section h2 {
+    font-weight: 600;
+    font-size: 5vh;
+}
+
+main #second-section .informations section p, main #fourth-section .gameplay section p {
+    font-size: 2vh;
+}
+
+main #third-section {
+    min-height: 70vh;
+    padding-top: 7vh;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+main #third-section .slider {
+    margin-top: 5vh;
+    min-height: 40vh;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+main #third-section .slider-content {
+    display: flex;
+    width: calc(40vh * 22);
+    animation: scroll 30s linear infinite;
+}
+main #third-section .slide {
+    min-height: 200px;
+    width: 40vh;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+main #third-section .slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+main #third-section .slider::before, main #third-section .slider::after {
+    content: '';
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255,255,255,0) 100%); */
+    min-height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+main #third-section .slider::before {
+    top: 0;
+    left: 0;
+}
+main #third-section .slider::after {
+    top: 0;
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-40vh * 11));
+    }
+}
+
+
+main #fifth-section {
+    text-transform: uppercase;
+    min-height: 70vh;
+}
+main #fifth-section .donnation {
+    min-height: 45vh;
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+main #fifth-section .donnation-goal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main #fifth-section .donnation-goal h2 {
+    font-size: 5.5vh;
+    margin-bottom: 5vh;
+}
+
+main #fifth-section .donnation-goal p {
+    font-size: 4vh;
+}
+
+progress {
+    min-height: 3vh;
+    margin-top: 10px;
+    font-size: 5vh;
+    border: 5px solid var(--white);
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--white);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--green);
+}
+
+
+#modal {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    opacity: 0;
+    z-index: 100;
+    transition: opacity 0.3s ease;
+}
+
+#open-modal-btn {
+    padding: 3vh;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 1vw;
+    border-radius: 10px;
+}
+
+#close-modal-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+main #fifth-section .donnation .card {
+    backdrop-filter: blur(50px);
+    background-image: url(../img/background.png);
+    min-height: 40vh;
+    min-width: 15vw;
+    margin: 10px;
+    border-radius: 10px;
+    border: 4px solid var(--white);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all .3s;
+}
+main #fifth-section .donnation .card h3 {
+    font-size: 4vh;
+    transition: all .3s;
+}
+main #fifth-section .donnation .card p {
+    margin-top: 20px;
+    font-size: 6vh;
+    transition: all .3s;
+}
+main #fifth-section .donnation .card:hover {
+    background-color: var(--white);
+    border: 6px solid var(--white);
+    transition: all .3s;
+}
+main #fifth-section .donnation .card:hover h3 {
+    font-size: 4vh;
+    transform: translateY(-25px);
+    transition: all .3s;
+}
+main #fifth-section .donnation .card:hover p {
+    font-size: 7vh;
+    margin-top: 10px;
+    color: var(--orange);
+    transition: all .3s;
+}
+
+main #fifth-section .donnation .card .line {
+    width: 0%;
+    min-height: 2px;
+    background-color: var(--black);
+    transition: ease-out .3s;
+}
+main #fifth-section .donnation .card:hover .line {
+    width: 60%;
+    transition: all .3s;
+}
+main #fifth-section .donnation .cards {
+    display: flex;
+}
+
+
+
+main #sixth-section {
+    min-height: 70vh;
+    padding-top: 0vh;
+    text-transform: uppercase;
+    color: var(--black);
+}
+main #sixth-section .details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+main #sixth-section .details section {
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh;
+    width: 30%;
+    margin: 4vh 2vw 0vh 2vw;
+    border: 3px solid var(--white);
+    padding: 2vw;
+    backdrop-filter: blur(10px);
+    color: var(--black);
+    border-radius: 10px;
+}
+
+main #sixth-section .details #first {
+    margin-left: 0px;
+}
+main #sixth-section .details section h3 {
+    margin-top: 4vh;
+    font-size: 5vh;
+   
+}
+main #sixth-section .details section p {
+    font-size: 2vh;
+    padding: 5vh 0vh;
+}
+
+footer {
+    min-height: 10vh;
+    border-top: 3px solid var(--black);
+    border-left: 3px solid var(--black);
+    border-right: 3px solid var(--black);
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+footer .left-footer {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 80%;
+    justify-content: flex-start;
+}
+footer .right-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+footer .right-footer p {
+    margin-left: 10px;
+}
+
+footer img {
+    width:10%;
+    margin-right: 10px;
+    margin-top: 15px;
+}
